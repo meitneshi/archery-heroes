@@ -29,7 +29,7 @@ $> yarn install
 $> yarn start
 ```
 
-Navigate throught **http://localhost:3333/** to land on the app.
+Navigate through **http://localhost:3333/** to land on the app.
 
 *nb: You can configure the port in the **package.json** under **scripts.start***
 
@@ -48,6 +48,15 @@ $> node server.js
 * Navigate through **http://localhost:8088/api** to see the welcome message
 
 *nb: You can configure the port in the **server.js** configuration*
+
+## Version 3.0
+###### Additional Prerequisites -> mongoDB environment (local DB)
+
+*coming soon...*
+
+## Version 3.1
+
+*coming soon...*
 
 # Credits
 
