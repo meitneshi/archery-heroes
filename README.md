@@ -33,6 +33,22 @@ Navigate throught **http://localhost:3333/** to land on the app.
 
 *nb: You can configure the port in the **package.json** under **scripts.start***
 
+## Version 2.0
+
+* Follow the step-by-step from **Version 1.0** using tag *archery-heroes-v2*
+* Build the project server
+```
+$> cd /path/to/the/repo/server
+$> npm install
+```
+* Start the server
+```
+$> node server.js
+```
+* Navigate through **http://localhost:8088/api** to see the welcome message
+
+*nb: You can configure the port in the **server.js** configuration*
+
 # Credits
 
 *This app is designed with ReactJs, HTML/CSS and built with npm and yarn*
