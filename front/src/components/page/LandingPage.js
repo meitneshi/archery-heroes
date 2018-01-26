@@ -5,7 +5,7 @@ import AthletesList from '../athlete/AthletesList';
 import Footer from '../utils/Footer';
 import Header from '../utils/Header';
 
-class LandingPage extends React.Component {
+class LandingPage extends React.Component<State, Props> {
   state = {
     athletesList: [],
   };

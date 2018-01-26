@@ -6,16 +6,16 @@ import Palmares from './Palmares';
 
 type Props = {
   athlete: Object,
-  athleteCountry: String,
+  athleteCountry: string,
 };
 
-const AthleteDetail = ({ athlete, country }: Props) => {
+const AthleteDetail = ({ athlete, athleteCountry }: Props) => {
   return (
     <div>
       <div className="athlete-detail">
         <AthleteCover athlete={athlete} />
         <div className="atlete-summary">
-          Athlete coming from {country} born in {athlete.birth}. More informations on <a href={athlete.link} target="_blank">french wikipedia</a>
+          Athlete coming from {athleteCountry} born in {athlete.birth}. More informations on <a href={athlete.link} target="_blank">french wikipedia</a>
         </div>
         <Palmares athlete={athlete} />
       </div>
