@@ -24,8 +24,8 @@ class DetailPage extends React.Component {
       'image': '',
       'cover': '',
       'link': '',
-      'medals': [{ id: 0, year: 0, type: 'G', event: 'Default' },]
-    }
+      'medals': [{ id: 0, year: 0, type: 'G', event: 'Default' }],
+    },
   };
 
   componentDidMount() {
@@ -39,7 +39,7 @@ class DetailPage extends React.Component {
     const countryResponse = await fetch('http://localhost:8088/api/country/' + athlete.country);
     const country = await countryResponse.json();
     this.setState({ athleteDetail: athlete });
-    this.setState({ country: country});
+    this.setState({ country});
   }
 
   render() {
@@ -47,13 +47,13 @@ class DetailPage extends React.Component {
       <div className="global-container">
         <Header imgSrc="static/img/logoTitle.jpg" />
         <div>
-          <AthleteDetail athlete={this.state.athleteDetail} country={this.state.country}/>
+          <AthleteDetail athlete={this.state.athleteDetail} country={this.state.country} />
         </div>
         <Footer
-            developper="Maxime Bibos"
-            language="React"
-            copyrightYear="2017"
-            githubRepo="http://github.com/meitneshi" />
+          developper="Maxime Bibos"
+          language="React"
+          copyrightYear="2017"
+          githubRepo="http://github.com/meitneshi" />
       </div>
     );
   }

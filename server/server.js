@@ -106,7 +106,7 @@ router.route('/athletes/:id')
 
 router.route('/country/:id')
   .get(function (req, res) {
-      res.json(countries[req.params.id])
+      res.json(countries[req.params.id]);
   });
 
 // REGISTER ROUTES

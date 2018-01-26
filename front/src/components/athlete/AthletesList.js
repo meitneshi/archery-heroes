@@ -8,7 +8,6 @@ type Props = {
 };
 
 const AthletesList = ({ athletes }: Props) => {
-
   return (
     <div className="athlete-list">
       {athletes.map(

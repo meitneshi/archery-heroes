@@ -7,7 +7,7 @@ import Header from '../utils/Header';
 
 class LandingPage extends React.Component {
   state = {
-    athletesList: []
+    athletesList: [],
   };
 
   componentDidMount() {
@@ -28,10 +28,10 @@ class LandingPage extends React.Component {
         <AthletesList athletes={this.state.athletesList} />
 
         <Footer
-            developper="Maxime Bibos"
-            language="React"
-            copyrightYear="2017"
-            githubRepo="http://github.com/meitneshi" />
+          developper="Maxime Bibos"
+          language="React"
+          copyrightYear="2017"
+          githubRepo="http://github.com/meitneshi" />
       </div>
     );
   }
