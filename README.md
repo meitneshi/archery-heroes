@@ -1,6 +1,6 @@
-# archery-heroes 
+# archery-heroes
 
-This simple App display a list of famous archer and their individual palmares 
+This simple App display a list of famous archer and their individual palmares
 
 **archery-heroes-v1** : The list of athlete is hard coded into the app
 
@@ -45,14 +45,28 @@ $> npm install
 ```
 $> node server.js
 ```
-* Navigate through **http://localhost:8088/api** to see the welcome message
+* Navigate through **http://localhost:8088/api/ping** to see the welcome message
 
 *nb: You can configure the port in the **server.js** configuration*
 
 ## Version 3.0
 ###### Additional Prerequisites -> mongoDB environment (local DB)
 
-*coming soon...*
+* Rebuild the server
+```
+$> cd /path/to/the/repo/server
+$> npm install
+```
+* populate your local database
+```
+$> node_modules/babel-cli/bin/babel-node.js scripts/populate.js
+```
+* Start the server
+```
+$> npm start
+```
+
+*The behavior of the app should not change. But under the hood, you can see that now, the date are fetched from your local database and are no longer hard coded into your app*
 
 ## Version 3.1
 
@@ -61,5 +75,3 @@ $> node server.js
 # Credits
 
 *This app is designed with ReactJs, HTML/CSS and built with npm and yarn*
-
-

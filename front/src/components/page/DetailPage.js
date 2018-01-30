@@ -5,6 +5,8 @@ import AthleteDetail from '../athlete/AthleteDetail';
 import Footer from '../utils/Footer';
 import Header from '../utils/Header';
 
+import { fillAthlete } from '../utils/utils';
+
 class DetailPage extends React.Component<State, Props> {
   state = {
     athleteDetail: {
@@ -17,7 +19,7 @@ class DetailPage extends React.Component<State, Props> {
       link: '',
       medals: [{ id: 0, year: 0, type: 'G', event: 'Default' }],
     },
-    athleteCountry: 'France',
+    athleteCountry: {},
   };
 
   componentDidMount() {
@@ -27,6 +29,8 @@ class DetailPage extends React.Component<State, Props> {
   fetchAthlete = async() => {
     const athleteResponse = await fetch('http://localhost:8088/api/athletes/' + this.props.match.params.id);
     const athlete = await athleteResponse.json();
+
+    fillAthlete(athlete);
 
     const countryResponse = await fetch('http://localhost:8088/api/country/' + athlete.country);
     const country = await countryResponse.json();

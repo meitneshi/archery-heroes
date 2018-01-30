@@ -9,11 +9,11 @@ const AthleteCover = ({ athlete }: Props) => {
   return (
     <div className="athlete-cover-container">
       <div className="athlete-cover">
-        <img style={{width: '100%', height: 'auto'}} src={'static/img/athletes/' + athlete.cover} />
+        <img style={{width: '100%', height: 'auto'}} src={athlete.cover} />
       </div>
       <div className="athlete-profile">
         <div className="athlete-profile-img">
-          <img style={{width: '150px'}} src={'static/img/athletes/' + athlete.image} />
+          <img style={{width: '150px'}} src={athlete.image} />
         </div>
         <div className="athlete-profile-name">
           {athlete.name}

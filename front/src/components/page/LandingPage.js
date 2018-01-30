@@ -5,6 +5,8 @@ import AthletesList from '../athlete/AthletesList';
 import Footer from '../utils/Footer';
 import Header from '../utils/Header';
 
+import { fillAthlete } from '../utils/utils';
+
 class LandingPage extends React.Component<State, Props> {
   state = {
     athletesList: [],
@@ -15,9 +17,14 @@ class LandingPage extends React.Component<State, Props> {
   }
 
   fetchAthletes = async() => {
-    const response = await fetch('http://localhost:8088/api/athletes');
-    const body = await response.json();
-    this.setState({ athletesList: body});
+    const athleteResponse = await fetch('http://localhost:8088/api/athletes');
+    const athletes = await athleteResponse.json();
+    // replace non existing portrait and cover (aka "") for default path
+    athletes.forEach((athlete) => {
+      fillAthlete(athlete);
+    });
+
+    this.setState({ athletesList: athletes});
   }
 
   render() {
