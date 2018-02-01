@@ -1,6 +1,6 @@
 import express, { Router } from 'express';
 import { findAllAthlete, findOneAthlete } from './controllers/athlete';
-import { findOneCountry } from './controllers/country';
+import { findOneCountry, findAllCountries } from './controllers/country';
 
 const router = Router();
 
@@ -17,7 +17,9 @@ router.route('/athletes').get(findAllAthlete);
 router.route('/athletes/:id').get(findOneAthlete);
 
 // === Country Routes
+// FIND All (GET)
+router.route('/countries').get(findAllCountries);
 // Find one (GET)
-router.route('/country/:id').get(findOneCountry);
+router.route('/countries/:id').get(findOneCountry);
 
 export default router;

@@ -32,7 +32,7 @@ class DetailPage extends React.Component<State, Props> {
 
     fillAthlete(athlete);
 
-    const countryResponse = await fetch('http://localhost:8088/api/country/' + athlete.country);
+    const countryResponse = await fetch('http://localhost:8088/api/countries/' + athlete.country);
     const country = await countryResponse.json();
     this.setState({ athleteDetail: athlete });
     this.setState({ athleteCountry: country });

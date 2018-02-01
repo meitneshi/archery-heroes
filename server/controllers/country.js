@@ -8,3 +8,7 @@ export const findOneCountry = (req, res) => {
       res.json(country);
   })
 };
+
+export const findAllCountries = (req, res) => {
+  Countries.find().lean().exec((err, countriesList) => res.json(countriesList));
+};

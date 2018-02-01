@@ -3,6 +3,8 @@ import React from 'react';
 
 type Props = {
   title: Object,
+  canDelete: boolean,
+  deleteMedal: func,
 };
 
 const typeMap = {
@@ -11,7 +13,7 @@ const typeMap = {
   'B': 'bronze',
 };
 
-const MedalDetail = ({ title }: Props) => {
+const MedalDetail = ({ title, canDelete, deleteMedal }: Props) => {
   return (
     <div className="medal-detail">
       <span className="title-component">
@@ -23,6 +25,7 @@ const MedalDetail = ({ title }: Props) => {
       <span className="title-component">
         {title.event}
       </span>
+      {canDelete && <input type="button" onClick={deleteMedal} value="X" />}
     </div>
   );
 };

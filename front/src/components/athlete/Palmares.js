@@ -21,7 +21,7 @@ const Palmares = ({ athlete }: Props) => {
       </div>
       <div className="medal-list">
         {sortedAthleteMedals.map((athleteMedal) => {
-          return <MedalDetail key={athleteMedal.id} title={athleteMedal} />;
+          return <MedalDetail key={athleteMedal.id} title={athleteMedal} canDelete={false} />;
         })}
       </div>
     </div>
